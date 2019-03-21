@@ -1,0 +1,60 @@
+body{
+  background: #f5f5f5;
+}
+
+.card-dis{
+  width: 19.5rem;
+  display:  inline-block;
+  margin: 5px;
+}
+.card-title{
+  min-height: 50px;
+}
+.card-text{
+  /* margin-bottom: 5px; */
+}
+.card-body{
+  padding: 12px;
+}
+.dis-top{
+  background: #1e2368;
+  border-radius: 15px;
+  padding: 20px;
+}
+.white{
+  color: #ffffff;
+  text-align: center;
+}
+.bg-blue{
+  background: rgba(23, 11, 126, 0.74);
+}
+.navbar{
+  padding: 15px;
+}
+
+
+
+
+
+.card {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-left: 3px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  animation-name: example;
+  animation-duration: 0.25s;
+  padding-left: 0;
+  border-left: 3px solid rgb(74, 34, 138);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+@keyframes example {
+    0%   {border-left: 2px solid #ffffff;}
+    25%  {border-left: 3px solid  rgb(192, 159, 245);}
+    50%  {border-left: 4px solid  rgb(140, 92, 216);}
+    100% {border-left: 5px solid  rgb(74, 34, 138);}
+}

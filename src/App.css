@@ -1,23 +1,37 @@
 body{
   background: #f5f5f5;
 }
+.App{
+  min-height: 550px;
+}
 
 .card-dis{
-  width: 19.5rem;
+  width: 20rem;
+  padding: 20px 0;
   display:  inline-block;
-  margin: 5px;
+  margin: 15px;
 }
 .card-title{
   min-height: 50px;
 }
-.card-text{
-  /* margin-bottom: 5px; */
-}
+
 .card-body{
   padding: 12px;
 }
+.card-link-a{
+  border: 1px solid rgb(8, 8, 80);
+  color: rgb(21, 21, 80);
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: linear-gradient(to right,#9752ff86,#5e94ff98);
+}
+.card-link-a:hover{
+  text-decoration: none;
+  background: linear-gradient(to right,#9752ffbe,#5e94ffd5) ;
+  color: #06111d
+}
 .dis-top{
-  background: #1e2368;
+  background: #1e236891;
   border-radius: 15px;
   padding: 20px;
 }
@@ -25,15 +39,31 @@ body{
   color: #ffffff;
   text-align: center;
 }
-.bg-blue{
-  background: rgba(23, 11, 126, 0.74);
-}
+
 .navbar{
   padding: 15px;
+  background: linear-gradient(to right,#9752ff,#5e93ff);
+  -webkit-box-shadow: 3px 5px 15px 2px #000000; 
+box-shadow: 3px 5px 15px 2px #000000;
 }
 
 
-
+.footer{
+  top: 650px; 
+  background: linear-gradient(to right,#9752ff,#5e93ff);
+  color: #ffffff;
+  padding: 20px;
+  -webkit-box-shadow: 0px -1px 15px 2px #000000; 
+  box-shadow: 0px -1px 15px 2px #000000;
+}
+.footer p{
+  margin: 0;
+}
+.backtoBtn{
+  text-decoration: none;
+  padding: 20px;
+  margin-bottom: 50px;
+}
 
 
 .card {
@@ -41,9 +71,13 @@ body{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding-left: 3px;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -webkit-box-shadow: 2px 0px 5px 0px #000000; 
+box-shadow: 1px 1px 3px 0px #000000;
 }
 
 .card:hover {
+  background: linear-gradient(to right,#9752ff4b,#5e94ff41);
+
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   animation-name: example;
@@ -57,4 +91,70 @@ body{
     25%  {border-left: 3px solid  rgb(192, 159, 245);}
     50%  {border-left: 4px solid  rgb(140, 92, 216);}
     100% {border-left: 5px solid  rgb(74, 34, 138);}
+}
+
+
+
+ul.pagination {
+  margin-left: 42%;
+  margin-top: 20px;
+  margin-bottom: 20;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+ul.pagination li.page-item.active p.page-link {
+  color: #445565 !important;
+  background-color: #e3e7eb !important;
+  border-color: #ced4da !important;
+}
+ul.pagination p.page-link {
+  padding: 0.75rem;
+  min-width: 2rem;
+  text-align: center;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+  color: #6b88a4;
+  font-weight: 900;
+  font-size: 1rem;
+}
+ul.pagination p.page-link:hover {
+  background-color: #f4f4f4;
+}
+@media(max-width: 1000px){
+	ul.pagination {
+    margin-left: 37%;
+  }
+}
+@media(max-width: 600px){
+	ul.pagination {
+    margin-left: 25%;
+  }
+}
+@media(max-width: 400px){
+	ul.pagination {
+    margin-left: 20%;
+  }
+}
+
+.wrap-filter{
+  background: url('./components//traning.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 30px 0px;
+}
+
+.course-tit{
+  margin-top: 50px;
+}
+.btn-a{
+  background: linear-gradient(to right,#9752ff4b,#5e94ff41);
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 50px;
+  color: gray;
+  display: block;
+}
+.btn-a:hover{
+  text-decoration: none;
+  color: #000000;
+  background: linear-gradient(to right,#9752ff85,#5e94ff79);
 }

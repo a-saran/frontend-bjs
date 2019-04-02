@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Listings from './Listings';
 import Filtering from './Filtering';
 import Spinner from './Spinner';
-import Nav from './Nav';
 import axios from 'axios';
 
 class Details extends Component {
@@ -18,7 +17,8 @@ class Details extends Component {
 
     async componentDidMount() {
         const res = await axios.get("https://api.myjson.com/bins/1fq8pm");
-        this.setState({ datas: res.data })
+
+        await this.setState({ datas: res.data })
     }
 
     onsearchChange_CourseName = (event) => {
@@ -40,11 +40,9 @@ class Details extends Component {
     }
     onsearchChange_ChildSub = (event) => {
         if (event.target.value === 'Child Subject') {
-            //console.log('true')
             this.setState({ ChildSubject: '' })
         }
         this.setState({ ChildSubject: event.target.value })
-        //console.log(event.target.value);
     }
     onclickTo_restore = () => {
         console.log('onclick_restore')
@@ -69,7 +67,6 @@ class Details extends Component {
         filteredData = filteredData.filter(data => {
             return data["Universities"]["Institutions"].toLowerCase().includes(searchUniversity.toLowerCase());
         })
-        console.log(filteredData)
 
 
         //select option for providers
@@ -130,12 +127,8 @@ class Details extends Component {
             }
         })
 
-
-
         return (
-            <div>
-                <Nav />
-                <br />
+            <div >
                 <Filtering
                     searchChange_CourseName={this.onsearchChange_CourseName}
                     searchChange_University={this.onsearchChange_University}
@@ -148,13 +141,13 @@ class Details extends Component {
                     childSub={uniqueChildSub}
                     searchChange_ChildSub={this.onsearchChange_ChildSub}
                     onclick_restore={this.onclickTo_restore}
+                    key={uniqueLength}
                 />
                 <br />
                 <h1 className="container" style={{ textAlign: 'right' }}>Course Found: <span className="text-info">{filteredData.length}</span></h1><br />
                 {
                     filteredData.length <= 0 ? (<Spinner />) : (<Listings data={filteredData} key={filteredData.length} />)
                 }
-
             </div>
         )
     }
